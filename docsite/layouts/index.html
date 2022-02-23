@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+{{ partial "head.html" . }}
+<body>
+<div class="wrapper">
+<nav>
+  	<div class="pull-left">
+      <div class="container">
+        <h2 class="lone-header">{{ .Site.Title }}</h2>
+      </div>
+    </div>
+    
+    <div class="pull-right">
+    </div>
+
+</nav>
+<section>
+  <div class="container">
+    {{ partial "nav.html" . }}
+    <div class="docs-content">
+        {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
+            <h2>{{ $name | title }}</h2>
+          {{ range $taxonomy.Pages }}
+              <h3 id="{{ .LinkTitle | urlize }}">{{ .Title }}</h3>
+              {{ .Content }}
+              <hr>
+          {{ end }}
+        {{ end }}
+      </div>
+  </div>
+</section>
+<section class="vibrant centered">
+  <div class="">
+    <h4> This documentation template is provided by <a href="http://www.frittt.com" target="_blank">Frittt Templates</a>. You can download and use this template for free. If you have used this template, please pay the developer's effort by Tweeting, sharing on Facebook, social mention or with a linkback. Enjoy! :)</h4>
+  </div>
+</section>
+<footer>
+  {{ partial "footer.html" . }}
+</footer>
+</div>
+<script src="{{ .Site.BaseURL }}assets/js/jquery.min.js"></script>
+<script src="{{ .Site.BaseURL }}assets/js/layout.js"></script>
+</body>
+</html>
