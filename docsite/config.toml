@@ -1,6 +1,0 @@
-baseURL = ''
-languageCode = 'en-us'
-title = 'LOLCODE Documentation'
-pygmentsStyle = "colorful"
-pygmentsUseClasses = false
-pygmentsCodeFences = true
