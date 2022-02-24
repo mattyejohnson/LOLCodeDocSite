@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://goofy-noether-9c15c7.netlify.app/'
 languageCode = 'en-us'
 title = 'LOLCODE Documentation'
 pygmentsStyle = "colorful"
